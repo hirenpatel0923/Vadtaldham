@@ -1,0 +1,8 @@
+.sldimg { border: 0;height:500px;width:500px; }
+/* Tiny Circleslider */
+#rotatescroll { height:500px; position:relative; width:500px; }
+#rotatescroll .viewport{ height:500px; position: relative; margin:0 auto; overflow:hidden; width:500px }
+#rotatescroll .overview { position: absolute; width: 798px; list-style: none; margin: 0; padding: 0;  left: 0; top: 0; }
+#rotatescroll .overview li { height:500px; width:500px; float: left; position: relative; }
+#rotatescroll .overlay {background:url(../images/vdcircle.png) no-repeat 0 0;  position: absolute; left: 0; top: 0; height:500px; width:500px; }
+#rotatescroll .dot span { display: none; }

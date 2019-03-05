@@ -1,0 +1,287 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Index.master.cs" Inherits="New_Design_Index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/website.css" rel="stylesheet" type="text/css" />
+    <link href="css/sidemenu.css" rel="stylesheet" type="text/css" />
+     
+    
+    <style type="text/css">
+        html
+        {
+            overflow-x:hidden;
+            }
+        
+    .rib
+    {
+        -moz-transform: rotate(30deg);
+     -o-transform: rotate(30deg);
+     -webkit-transform: rotate(30deg); 
+        }
+      a.back{
+            width:256px;
+            height:73px;
+            position:fixed;
+            bottom:15px;
+            right:15px;
+            background:#fff url(codrops_back.png) no-repeat top left;
+        }   
+       
+    </style>
+    <style type="text/css">
+        .fb
+        {
+            left:1320px;
+            }
+        #fb
+        {
+            left:1320px;top:300px;z-index:10;position:fixed;float:right;width:30px;height:100px;background-color:Gray;
+            }
+   
+        #show
+        {
+            left:1350px;z-index:10;position:fixed;float:left;width:500px;height:500px;background-color:White;
+            }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.tinycircleslider.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fb").click(function () {
+                if ($("#fb").is(".fb")) {
+                    $("#fb").animate({ left: '820px' });
+                    $("#show").animate({ left: '850px' });
+                    $("#fb").removeClass("fb");
+                }
+                else {
+                    $("#fb").animate({ left: '1320px' });
+                    $("#show").animate({ left: '1350px' });
+                    $("#fb").addClass("fb");
+                }
+
+            });
+           
+        });
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width:1366px;position:absolute;top:0px;left:0px;">
+    <%--<div class="rib" style="width:31px;height:31px;z-index:1;position:absolute;top:121px;left:160px;background-color:Black;"></div>--%>
+    <div id="left" style="background-image:url('images/abc_01.gif');background-repeat:repeat-y;width:179px;height:678px;float:left;">
+    <div id="leftp1" style="background-image:url('images/abc_01.gif');background-repeat:repeat-y;width:179px;height:678px;float:left;position:fixed;"></div>
+        <ul id="navigation" style="top:120px;">
+            <li class="home" ><a href="Dailydarshan.aspx" title="Daily Darshan"><span style="float:left;padding:10px;">Daily <br />Darshan</span><img src="Prabhu/3.png" height="50" width="50" style="float:right;margin-top:15px;margin-right:10px;"/></a></li>
+            <li class="about"><a href="Video_Gallary.aspx" title="Latest Video"><span style="float:left;padding:10px;">Latest <br />Videos</span><img src="icon/Video.ico" height="50" width="50" style="float:right;margin-top:15px;margin-right:10px;" /></a></li>
+            <li class="search"><a href="#" title="Live Video Darshan"><span style="float:left;padding:10px;">Live <br />video <br />Darshan</span><img src="icon/Movies-icon.png" height="50" width="50" style="float:right;margin-top:15px;margin-right:10px;"/></a></li>
+            <li class="photos"><a href="DivineMusic.aspx" title="Divine Music Player"><span style="float:left;padding:10px;">Divine <br />Music <br />Player</span><img src="icon/Music Folder 2.ico" height="50" width="50" style="float:right;margin-top:15px;margin-right:10px;"/></a></li>
+            <li class="rssfeed"><a href="E_Magazine.aspx" title="E-Magazine"><span style="float:left;padding:10px;">E-<br />Magazine</span><img src="icon/Text-Edit.ico" height="50" width="50" style="float:right;margin-top:15px;margin-right:10px;"/></a></li>
+            <li class="rssfeed"><a href="#" title="Subscribe News Letter"><span style="float:left;padding:10px;">Subscribe <br />News <br />Letter</span><img src="icon/NEWS.ICO" height="50" width="50" style="float:right;margin-top:15px;margin-right:10px;"/></a></li>
+           
+        </ul>
+         <script type="text/javascript">
+             $(function () {
+                 $('#navigation a').stop().animate({ 'marginLeft': '-75px' }, 1000);
+                 
+
+                 $('#navigation > li').hover(
+                    function () {
+                        $('a', $(this)).stop().animate({ 'marginLeft': '-2px' }, 200);
+                       
+                    },
+                    function () {
+                        $('a', $(this)).stop().animate({ 'marginLeft': '-75px' }, 200);
+                        
+                    }
+                );
+             });
+        </script>
+
+    </div>
+    <div id="middle" style="background-image:url('images/abc_02.gif');background-repeat:repeat-y;height:687px;width:991px;float:left;">
+        <img src="images/logo.png" /><img src="images/insp.png" />
+        <div id='cssmenu' style="position:relative;">
+            <ul>
+               <li><a href="Home.aspx"><span>Home</span></a></li>
+               <li class='has-sub '><a href='#'><span>About Us</span></a>
+                  <ul>
+                     <li><a href="Swaminarayan_Sect.aspx"><span>Swaminarayan Sect</span></a>
+                     <li><a href="VadtalDham.aspx"><span>Vadtal Dham</span></a></li>
+                     <li><a href="Holy_Places.aspx"><span>Holy Places</span></a></li>      
+                  </ul>
+               </li>
+               <li class='has-sub '><a href='#'><span>Daily Darshan</span></a>
+                    <ul>
+                        <li><a href="Dailydarshan.aspx"><span>Shangar Darshan</span></a></li>
+                        <li><a href="ShayanDarshan.aspx"><span>Shayan Darshan</span></a></li>
+                        <li><a href='#'><span>Live Video Darshan</span></a></li>
+                    </ul>
+               </li>
+               <li><a href="AcharyaDarshan.aspx"><span>Aacharya Tradition</span></a></li>
+               <li class='has-sub '><a href='#'><span>Gallery</span></a>
+                    <ul>
+                        <li><a href="PhotoGallery.aspx"><span>Photo Gallery</span></a></li>
+                        <li><a href='#'><span>Video Gallery</span></a></li>
+                        <li><a href="DivineMusic.aspx"><span>Divine Music Player</span></a></li>
+                    </ul>
+               </li>
+               <li class='has-sub '><a href='#'><span>Download</span></a>
+                    <ul>
+                        <li><a href="DesktopWallpaper.aspx"><span>Desktop Wallpaper</span></a></li>
+                        <li><a href="MobileWallpaper.aspx"><span>Mobile Wallpaper</span></a></li>
+                        <li><a href="MobileRingtone.aspx"><span>Mobile Ringtone</span></a></li>
+                        <li><a href='#'><span>Videos</span></a></li>
+                    </ul>
+               </li>
+               <li class='has-sub '><a href='#'><span>E-Literature</span></a>
+                    <ul>
+                        <li><a href="E_Magazine.aspx"><span>E-Magazine</span></a></li>
+                        <li><a href="E_Books.aspx"><span>E-Books</span></a></li>
+                        <li><a href="Article.aspx"><span>Articles</span></a></li>
+                    </ul>
+               </li>
+               <li class='has-sub '><a href='#'><span>Activities</span></a>
+                    <ul>
+                        <li><a href="CurrentProject.aspx"><span>Current Projects</span></a></li>
+                        <li><a href='#'><span>Future Projects</span></a></li>
+                    </ul>
+               </li>
+               
+               <!--<li><a href="#"><span>Online Donation</span></a></li>-->
+               <li><a href="ContactUs.aspx"><span>Contact Us</span></a></li>
+              
+            </ul>
+        </div>
+        <div id="maincontent" style="position:relative;width:991px;height:auto;">
+           
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+
+        
+    </div>
+    <div id="right" style="background-image:url('images/abc_03.gif');background-repeat:repeat-y;width:196px;height:678px;float:left;">
+    <div id="Div2" style="background-image:url('images/abc_03.gif');background-repeat:repeat-y;width:196px;height:678px;float:left;position:fixed;"></div>
+        
+    
+    </div>
+        
+    </div>
+         <div id="show">
+            <fieldset>
+                <legend><span style="font-size:20px; color:#123;  text-shadow:0px 2px 3px #444; letter-spacing:0.12em; font-family:Lucida Sans;">Feed Back Form</span>
+                </legend>
+            
+                <table>
+                    <tr>
+                        <td>
+                              <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                              <asp:TextBox ID="name" runat="server"></asp:TextBox>
+                               
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name must be required." ControlToValidate="name"></asp:RequiredFieldValidator>
+                  
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationExpression="[a-zA-Z\.\'\-_\s]{1,40}" ErrorMessage="Enter Valid Name" ControlToValidate="name"></asp:RegularExpressionValidator>    
+                   
+                   
+                        </td>
+                    </tr>
+
+                    <tr>
+                          <td>
+                                 <asp:Label ID="email1" runat="server" Text="Email"></asp:Label>
+                          </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                  <asp:TextBox ID="email" runat="server"></asp:TextBox>
+
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Email must be required." ControlToValidate="email"></asp:RequiredFieldValidator>
+                   
+                                  <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" 
+                                      ControlToValidate="email" ErrorMessage="Enter Valid Email" 
+                                      ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                   
+                            </td>
+                    </tr>
+                   
+                    <tr>
+                          <td>
+                                 <asp:Label ID="Label2" runat="server" Text="City"></asp:Label>
+                          </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                  <asp:TextBox ID="city" runat="server"></asp:TextBox>
+
+                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="City must be required." ControlToValidate="city"></asp:RequiredFieldValidator>
+                  
+                                   <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationExpression="[a-zA-Z\.\'\-_\s]{1,40}" ErrorMessage="Enter Valid City" ControlToValidate="city"></asp:RegularExpressionValidator>    
+                   
+                            </td>
+                    </tr>
+                   
+                     <tr>
+                          <td>
+                                 <asp:Label ID="Label3" runat="server" Text="Country"></asp:Label>
+
+                                   
+                          </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                  <asp:TextBox ID="country" runat="server"></asp:TextBox>
+
+                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Country must be required." ControlToValidate="country"></asp:RequiredFieldValidator>
+                  
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ValidationExpression="[a-zA-Z\.\'\-_\s]{1,40}" ErrorMessage="Enter Valid Country" ControlToValidate="country"></asp:RegularExpressionValidator>    
+                   
+                            </td>
+                    </tr>
+                  
+                    <tr>
+                          <td>
+                                 <asp:Label ID="Label4" runat="server" Text="Message"></asp:Label>
+                          </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                  <asp:TextBox ID="message" TextMode="MultiLine" runat="server"></asp:TextBox>
+
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please Enter Message" ControlToValidate="message"></asp:RequiredFieldValidator>
+                  
+                                  <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" 
+                                      ControlToValidate="message" ErrorMessage="Enter only 200 char" 
+                                      ValidationExpression="^[\s\S]{0,200}$"></asp:RegularExpressionValidator>
+                  
+                            </td>
+                    </tr>
+
+                    <tr>
+                        
+                            <td>
+                                    <asp:Button ID="send" runat="server" Text="SEND" onclick="send_Click" />         
+                            </td>
+                    </tr>
+                  
+            </table>
+            </fieldset>
+        </div>
+        <div id="fb" class="fb">
+            <div style="top:40px;position:relative; transform:rotate(-90deg);-ms-transform:rotate(-90deg);-webkit-transform:rotate(-90deg);">Feedback</div>
+        </div>
+    </form>
+</body>
+</html>
